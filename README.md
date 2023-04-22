@@ -2,16 +2,16 @@
 
 ## Proof of Concept on interfacing Mac Shortcuts with Cheshire Cat
 
-Inspired by [Yue-Yang](https://github.com/Yue-Yang/ChatGPT-Siri)'s work with OpenAI's ChatGPT, I tried to make [Cheshire Cat](https://github.com/pieroit/cheshire-cat) talk with Siri.
+Inspired by [Yue-Yang](https://github.com/Yue-Yang/ChatGPT-Siri)'s work with OpenAI's ChatGPT Siri interface, I tried to make [Cheshire Cat](https://github.com/pieroit/cheshire-cat) talk with Siri on MAC.
 
 ### Requirements
 * MacOSX Ventura or later versions
 * [Homebrew](https://brew.sh)
 * [websocat](https://github.com/vi/websocat)
-* [Cheshire Cat](https://github.com/pieroit/cheshire-cat) installed locally, or at least on a reachable IP
+* [Cheshire Cat](https://github.com/pieroit/cheshire-cat) installed locally, or at least on a reachable IP address.
 
 ### Architecture
-The PoC is very simple. From Siri, it asks for a prompt from the user. Then it uses an Apple Script to send the message to the Cheshire Cat and retrieve the response. After that, it extracts the response from the JSON with simple JavaScript and returns it to the user. You can run this with a textual prompt or voice. 
+The PoC is very simple. From Siri, it asks for a prompt from the user. Then it uses an [Apple Script](https://github.com/xdatap1/siri-cheshire-cat/blob/main/applescript.txt) to send the message to the Cheshire Cat and retrieve the response. After that, it extracts the response from the JSON with simple [JavaScript](https://github.com/xdatap1/siri-cheshire-cat/blob/main/javascript.txt) and returns it to the user. You can run this with a textual prompt or voice. 
 
 ### Installation
 
@@ -19,15 +19,15 @@ To download the shortcut, click [here](https://www.icloud.com/shortcuts/277345a4
 
 After installing it, you should see this:
 
-![](Siri-Cheshire Cat Quick Command.png)
+![](Siri-Cheshire-Cat.png)
 
 If you see the following, you have the scripting actions disabled:
 
-![](disabled script actions.png)
+![](disabled-script-actions.png)
 
 Go to Preferences / Advanced and click the "Allow Running Scripts" option to enable it.
 
-![](script enabling.png)
+![](script-enabling.png)
 
 Currently, Cheshire Cat exposes a [websocket](https://en.wikipedia.org/wiki/WebSocket) as the only way to talk with it. Unfortunately, Apple Shortcuts doesn't support WebSockets, so I solved this problem with [websocat](https://github.com/vi/websocat), a command line wrapper to WebSocket.
 
