@@ -40,7 +40,9 @@ Open a Terminal and type:
 > /opt/homebrew/bin/websocat
 > 
 
-If the path is different from the above, you need to update accordingly AppleScript line 4. Also, if you have Cheshire Cat installed on a different machine than localhost, you need to update 3 as well.
+If the path is different from the above, you need to update accordingly [Apple Script](https://github.com/xdatap1/siri-cheshire-cat/blob/main/applescript.txt) line 4. Also, if you have Cheshire Cat installed on a different machine than localhost, you need to update 3 as well.
+
+![](apple-script-changes.png)
 
 ### Usage
 
