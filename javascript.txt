@@ -1,0 +1,5 @@
+function run(input, parameters) {
+    var jsonString = input[0];
+    var jsonDict = JSON.parse(jsonString);
+    return jsonDict.content;
+}

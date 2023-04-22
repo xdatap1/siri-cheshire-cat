@@ -1,0 +1,6 @@
+on run {input, parameters}
+	set message to item 1 of input
+	set address to "ws://localhost:1865/ws"
+	set response to do shell script "echo " & quoted form of message & " | /opt/homebrew/bin/websocat -1 -n " & quoted form of address
+	return response
+end run
