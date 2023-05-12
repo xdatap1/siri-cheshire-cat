@@ -1,5 +1,8 @@
 # Siri - Cheshire Cat integration
 
+> **Warning** 
+> This project is OBSOLETE. Please find the new version on the project [cheshire-cat-adapters](https://github.com/xdatap1/cheshire-cat-adapters/) 
+
 ## Proof of Concept on interfacing Mac Shortcuts with Cheshire Cat
 
 Inspired by [Yue-Yang](https://github.com/Yue-Yang/ChatGPT-Siri)'s work with OpenAI's ChatGPT Siri interface, I tried to make [Cheshire Cat](https://github.com/pieroit/cheshire-cat) talk with Siri on MAC.
